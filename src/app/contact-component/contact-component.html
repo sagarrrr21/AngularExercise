@@ -1,3 +1,52 @@
-<form>
-    
+<app-home-component />
+<form #contactForm="ngForm" action="" method="post">
+  <input
+    type="text"
+    name="name"
+    [(ngModel)]="name"
+    placeholder="enter name minlength 3"
+    minlength="3"
+    required
+    #nameRef="ngModel"
+  />
+  <div *ngIf="nameRef.touched && nameRef.invalid">
+    <p>name is required</p>
+  </div>
+  <input
+    type="text"
+    name="email"
+    [(ngModel)]="email"
+    placeholder="enter email minlength 3"
+    minlength="3"
+    required
+    #emailRef="ngModel"
+  />
+  <div *ngIf="emailRef.touched && emailRef.invalid">
+    <p>mail is required</p>
+  </div>
+  <input
+    type="text"
+    name="phone"
+    [(ngModel)]="phone"
+    placeholder="enter phone minlength 3"
+    minlength="3"
+    required
+    #phoneRef="ngModel"
+  />
+
+  <input
+    type="text"
+    name="message"
+    [(ngModel)]="message"
+    placeholder="enter message minlength 10"
+    minlength="10"
+    required
+    #messageRef="ngModel"
+  />
+  <div *ngIf="messageRef.touched && messageRef.invalid">
+    <p>message is required</p>
+  </div>
+  <button (click)="onSubmit(contactForm)">submit</button>
 </form>
+
+<h1>hello</h1>

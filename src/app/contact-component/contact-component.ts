@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Form, FormsModule, NgForm } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from '../home-component/home-component';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-contact-component',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule, HomeComponent],
   templateUrl: './contact-component.html',
   styleUrl: './contact-component.css',
 })
@@ -12,5 +15,10 @@ export class ContactComponent {
   email: string = '';
   phone: string = '';
   message: string = '';
-  
+
+  onSubmit(form: NgForm) {
+    const x = form.value;
+    console.log(typeof x);
+    console.log('Form Data:', form.value);
+  }
 }

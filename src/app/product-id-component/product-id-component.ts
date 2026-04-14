@@ -8,7 +8,7 @@ import { NotFoundComponent } from "../not-found-component/not-found-component";
 @Component({
   selector: 'app-product-id-component',
   standalone: true,
-  imports: [CommonModule, NotFoundComponent, RouterLink],
+  imports: [CommonModule, NotFoundComponent],
   templateUrl: './product-id-component.html',
   styleUrl: './product-id-component.css',
 })
