@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { Form, FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from '../home-component/home-component';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-contact-component',
