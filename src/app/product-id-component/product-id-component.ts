@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../models/IProduct';
 import { ProductService } from '../services/product-service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NotFoundComponent } from "../not-found-component/not-found-component";
 
 @Component({
   selector: 'app-product-id-component',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NotFoundComponent, RouterLink],
   templateUrl: './product-id-component.html',
   styleUrl: './product-id-component.css',
 })
