@@ -1,0 +1,27 @@
+<app-home-component></app-home-component>
+
+<div *ngFor="let product of ProductArray">
+  <h2>
+    <a [routerLink]="['/product', product.id]">
+      {{ product.name }}
+    </a>
+  </h2>
+
+  <p>ID : {{ product.id }}</p>
+  <p>Price : {{ product.price }}</p>
+  <p>Description : {{ product.description }}</p>
+
+  <button (click)="goToProductDetails(product.id)">View Details</button>
+
+  <hr />
+</div>
+
+<input type="text" #productId />
+
+<button (click)="getProductById(+productId.value)">Get Product</button>
+
+<div *ngIf="selectedProduct">
+  <h2>{{ selectedProduct.name }}</h2>
+  <p>ID: {{ selectedProduct.id }}</p>
+  <p>Price: {{ selectedProduct.price }}</p>
+</div>
