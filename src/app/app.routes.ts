@@ -5,6 +5,9 @@ import { NotFoundComponent } from './not-found-component/not-found-component';
 import { ProductIdComponent } from './product-id-component/product-id-component';
 import { ReactiveFormComponent } from './reactive-form-component/reactive-form-component';
 import { ContactComponent } from './contact-component/contact-component';
+import { GetApiComponent } from './apiIntegration/get-api-component/get-api-component';
+import { PostApiComponent } from './apiIntegration/post-api-component/post-api-component';
+import { RxjsComponent } from './rxjs-component/rxjs-component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,5 +16,8 @@ export const routes: Routes = [
   { path: 'product/:id', component: ProductIdComponent },
   { path: 'forms', component: ReactiveFormComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'getapi', component: GetApiComponent },
+  { path: 'postapi', component: PostApiComponent },
+  { path: 'rxjs', component: RxjsComponent },
   { path: '**', component: NotFoundComponent },
 ];
